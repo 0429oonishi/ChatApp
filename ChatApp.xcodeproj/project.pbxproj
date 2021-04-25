@@ -13,6 +13,12 @@
 		AB8A81B226356B0F007A20C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A81B026356B0F007A20C2 /* LaunchScreen.storyboard */; };
 		AB8A81BC26356C4B007A20C2 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */; };
 		AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */; };
+		AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */; };
+		AB8A820D2635B79F007A20C2 /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */; };
+		AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */; };
+		AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */; };
+		AB8A821D2635BB1F007A20C2 /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */; };
+		AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		AB8A81B326356B0F007A20C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
 		AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
+		AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
+		AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,53 @@
 		AB8A81A426356B0B007A20C2 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				AB8A82212635C307007A20C2 /* Extensions */,
+				AB8A820F2635B7DA007A20C2 /* Storyboards */,
+				AB8A821F2635BB27007A20C2 /* Views */,
+				AB8A82102635B7EF007A20C2 /* Controllers */,
 				AB8A81A526356B0B007A20C2 /* AppDelegate.swift */,
 				AB8A81A726356B0B007A20C2 /* SceneDelegate.swift */,
-				AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */,
-				AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */,
 				AB8A81AE26356B0F007A20C2 /* Assets.xcassets */,
 				AB8A81B026356B0F007A20C2 /* LaunchScreen.storyboard */,
 				AB8A81B326356B0F007A20C2 /* Info.plist */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		AB8A820F2635B7DA007A20C2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */,
+				AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB8A82102635B7EF007A20C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */,
+				AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB8A821F2635BB27007A20C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */,
+				AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */,
+				AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB8A82212635C307007A20C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +174,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8A821D2635BB1F007A20C2 /* ChatRoomTableViewCell.xib in Resources */,
 				AB8A81B226356B0F007A20C2 /* LaunchScreen.storyboard in Resources */,
 				AB8A81AF26356B0F007A20C2 /* Assets.xcassets in Resources */,
 				AB8A81BC26356C4B007A20C2 /* ChatList.storyboard in Resources */,
+				AB8A820D2635B79F007A20C2 /* ChatRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +191,11 @@
 			files = (
 				AB8A81A626356B0B007A20C2 /* AppDelegate.swift in Sources */,
 				AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */,
+				AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */,
+				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
 				AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */,
+				AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */,
+				AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
