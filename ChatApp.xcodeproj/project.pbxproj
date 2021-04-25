@@ -19,6 +19,8 @@
 		AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */; };
 		AB8A821D2635BB1F007A20C2 /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */; };
 		AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */; };
+		AB8A82282635C505007A20C2 /* ChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */; };
+		AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 		AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccessoryView.xib; sourceTree = "<group>"; };
+		AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */,
 				AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */,
 				AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */,
+				AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */,
+				AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 				AB8A81B226356B0F007A20C2 /* LaunchScreen.storyboard in Resources */,
 				AB8A81AF26356B0F007A20C2 /* Assets.xcassets in Resources */,
 				AB8A81BC26356C4B007A20C2 /* ChatList.storyboard in Resources */,
+				AB8A82282635C505007A20C2 /* ChatInputAccessoryView.xib in Resources */,
 				AB8A820D2635B79F007A20C2 /* ChatRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +202,7 @@
 				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
 				AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */,
 				AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */,
+				AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */,
 				AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
