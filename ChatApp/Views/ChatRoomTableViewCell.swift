@@ -28,3 +28,12 @@ final class ChatRoomTableViewCell: UITableViewCell {
     }
     
 }
+
+// MARK: - setup
+extension ChatRoomTableViewCell {
+    
+    func setup(text: String) {
+        messageTextView.text = text
+    }
+    
+}

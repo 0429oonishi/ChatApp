@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol ChatInputAccessoryViewDelegate: class {
+    func sendButtonDidTapped(text: String)
+}
+
 final class ChatInputAccessoryView: UIView {
     
     @IBOutlet private weak var chatTextView: UITextView!
     @IBOutlet private weak var sendButton: UIButton!
+    
+    override var intrinsicContentSize: CGSize { .zero }
+    weak var delegate: ChatInputAccessoryViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,10 +31,19 @@ final class ChatInputAccessoryView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+            
+    @IBAction private func sendButtonDidTapped(_ sender: Any) {
+        guard let text = chatTextView.text else { return }
+        delegate?.sendButtonDidTapped(text: text)
+        chatTextView.text = ""
+    }
     
-    override var intrinsicContentSize: CGSize { .zero }
+}
+
+// MARK: - setup
+private extension ChatInputAccessoryView {
     
-    private func loadNib() {
+    func loadNib() {
         let nib = UINib(nibName: String(describing: ChatInputAccessoryView.self), bundle: nil)
         guard let view = nib.instantiate(withOwner: self,
                                          options: nil).first as? UIView else { return }
@@ -36,20 +52,26 @@ final class ChatInputAccessoryView: UIView {
         self.addSubview(view)
     }
     
-}
-
-// MARK: - setup
-private extension ChatInputAccessoryView {
-    
     func setupViews() {
         chatTextView.layer.cornerRadius = 15
         chatTextView.layer.borderColor = UIColor.rgb(red: 230, green: 230, blue: 230).cgColor
         chatTextView.layer.borderWidth = 1
+        chatTextView.text = ""
+        chatTextView.delegate = self
         sendButton.layer.cornerRadius = 15
         sendButton.imageView?.contentMode = .scaleAspectFill
         sendButton.contentVerticalAlignment = .fill
         sendButton.contentHorizontalAlignment = .fill
         sendButton.isEnabled = true
+    }
+    
+}
+
+// MARK: - UITextViewDelegate
+extension ChatInputAccessoryView: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        sendButton.isEnabled = !textView.text.isEmpty
     }
     
 }

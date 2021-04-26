@@ -38,6 +38,9 @@
                     <state key="normal">
                         <imageReference key="image" image="arrow.up.to.line" catalog="system" symbolScale="large" renderingMode="original"/>
                     </state>
+                    <connections>
+                        <action selector="sendButtonDidTapped:" destination="-1" eventType="touchUpInside" id="yKi-mA-7td"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
