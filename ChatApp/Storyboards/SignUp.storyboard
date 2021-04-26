@@ -117,11 +117,11 @@
                     </view>
                     <connections>
                         <outlet property="alreadyHaveAccountButton" destination="lJh-qJ-cC5" id="5Gi-vW-d0t"/>
-                        <outlet property="emailTextField" destination="Wjr-k9-rzP" id="ZiJ-aM-2iY"/>
-                        <outlet property="passwordTextField" destination="BKS-6w-iVN" id="YIM-jO-hYR"/>
+                        <outlet property="emailTextField" destination="Wjr-k9-rzP" id="Gys-a6-kFe"/>
+                        <outlet property="passwordTextField" destination="BKS-6w-iVN" id="Mn2-5a-Yxj"/>
                         <outlet property="profileImageButton" destination="Gkj-0k-7h5" id="f4w-87-AZT"/>
-                        <outlet property="registerButton" destination="Wez-BN-kEW" id="Uq6-la-KeD"/>
-                        <outlet property="usernameTextField" destination="hRU-e6-293" id="SBn-8w-YDR"/>
+                        <outlet property="registerButton" destination="Wez-BN-kEW" id="Vek-4T-bPL"/>
+                        <outlet property="usernameTextField" destination="hRU-e6-293" id="wTA-DR-etO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKl-Ap-3iI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
