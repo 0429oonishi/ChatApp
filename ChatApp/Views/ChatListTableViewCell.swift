@@ -13,9 +13,7 @@ final class ChatListTableViewCell: UITableViewCell {
     @IBOutlet private weak var latestMessageLabel: UILabel!
     @IBOutlet private weak var partnerLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
-    
-    static var identifier: String { String(describing: self) }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         

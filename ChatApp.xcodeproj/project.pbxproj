@@ -21,6 +21,8 @@
 		AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */; };
 		AB8A82282635C505007A20C2 /* ChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */; };
 		AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */; };
+		AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */; };
+		AB8A823326368295007A20C2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A823226368295007A20C2 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccessoryView.xib; sourceTree = "<group>"; };
 		AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
+		AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		AB8A823226368295007A20C2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */,
+				AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */,
+				AB8A823226368295007A20C2 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,9 +206,11 @@
 				AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */,
 				AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */,
 				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
+				AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */,
 				AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */,
 				AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */,
 				AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */,
+				AB8A823326368295007A20C2 /* UIViewController+Extension.swift in Sources */,
 				AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

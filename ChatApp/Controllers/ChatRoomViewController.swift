@@ -11,7 +11,6 @@ final class ChatRoomViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    static var identifier: String { String(describing: self) }
     private var chatInputAccessoryView: ChatInputAccessoryView = {
        let view = ChatInputAccessoryView()
         view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 100)

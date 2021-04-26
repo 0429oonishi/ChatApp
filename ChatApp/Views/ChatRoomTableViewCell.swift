@@ -13,9 +13,6 @@ final class ChatRoomTableViewCell: UITableViewCell {
     @IBOutlet private weak var messageTextView: UITextView!
     @IBOutlet private weak var dateLabel: UILabel!
     
-    static var identifier: String { String(describing: self) }
-    static func nib() -> UINib { UINib(nibName: String(describing: self), bundle: nil) }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         
