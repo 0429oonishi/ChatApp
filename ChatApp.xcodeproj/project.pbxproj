@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,9 @@
 		AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */; };
 		AB8A823326368295007A20C2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A823226368295007A20C2 /* UIViewController+Extension.swift */; };
 		AB8A825F2636AABE007A20C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8A825E2636AABE007A20C2 /* GoogleService-Info.plist */; };
+		AB8A826E2636ACF1007A20C2 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A826D2636ACF1007A20C2 /* SignUp.storyboard */; };
+		AB8A82712636AF7F007A20C2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */; };
+		AB8A82752636B10D007A20C2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82742636B10D007A20C2 /* String+Extension.swift */; };
 		BBBEF92E584079768CC9CBED /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95345ACA520904B6D166A59 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		AB8A823226368295007A20C2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AB8A825E2636AABE007A20C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB8A826D2636ACF1007A20C2 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AB8A82742636B10D007A20C2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,6 @@
 				6F2A8CAC88A0E3B894B65263 /* Pods-ChatApp.debug.xcconfig */,
 				8BE507AC3186F4B98D3D12BD /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,6 +127,7 @@
 			children = (
 				AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */,
 				AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */,
+				AB8A826D2636ACF1007A20C2 /* SignUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 			children = (
 				AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */,
 				AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */,
+				AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 				AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */,
 				AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */,
 				AB8A823226368295007A20C2 /* UIViewController+Extension.swift */,
+				AB8A82742636B10D007A20C2 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 				AB8A81BC26356C4B007A20C2 /* ChatList.storyboard in Resources */,
 				AB8A82282635C505007A20C2 /* ChatInputAccessoryView.xib in Resources */,
 				AB8A820D2635B79F007A20C2 /* ChatRoom.storyboard in Resources */,
+				AB8A826E2636ACF1007A20C2 /* SignUp.storyboard in Resources */,
 				AB8A825F2636AABE007A20C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8A82712636AF7F007A20C2 /* SignUpViewController.swift in Sources */,
 				AB8A81A626356B0B007A20C2 /* AppDelegate.swift in Sources */,
 				AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */,
 				AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */,
+				AB8A82752636B10D007A20C2 /* String+Extension.swift in Sources */,
 				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
 				AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */,
 				AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */,

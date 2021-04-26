@@ -14,16 +14,36 @@ final class ChatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
-        
-        navigationController?.navigationBar.barTintColor = .rgb(red: 39, green: 49, blue: 69)
-        navigationItem.title = "トーク"
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        setupTableView()
+        setupNavigationController()
+        presentSignUpVC()
         
     }
 
+}
+
+// MARK: - setup
+private extension ChatListViewController {
+    
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+    }
+    
+    func setupNavigationController() {
+        navigationController?.navigationBar.barTintColor = .rgb(red: 39, green: 49, blue: 69)
+        navigationItem.title = "トーク"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
+    func presentSignUpVC() {
+        let storyboard = UIStoryboard(name: .signUpViewController, bundle: nil)
+        let signUpVC = storyboard.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
+        signUpVC.modalPresentationStyle = .fullScreen
+        self.present(signUpVC, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - UITableViewDelegate
