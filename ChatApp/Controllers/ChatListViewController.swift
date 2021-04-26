@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 final class ChatListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
+    
+    private var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +22,35 @@ final class ChatListViewController: UIViewController {
         setupTableView()
         setupNavigationController()
         presentSignUpVC()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+                
+        fetchUserInfoFromFirestore()
         
     }
+    
+}
 
+// MARK: - Firebase
+private extension ChatListViewController {
+    
+    func fetchUserInfoFromFirestore() {
+        Firestore.firestore().collection("users").getDocuments { snapshots, error in
+            if let error = error {
+                print("user情報の取得に失敗しました。\(error)")
+                return
+            }
+            snapshots?.documents.forEach { snapshot in
+                let dic = snapshot.data()
+                let user = User(dic: dic)
+                self.users.append(user)
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
 }
 
 // MARK: - setup
@@ -38,10 +69,12 @@ private extension ChatListViewController {
     }
     
     func presentSignUpVC() {
-        let storyboard = UIStoryboard(name: .signUpViewController, bundle: nil)
-        let signUpVC = storyboard.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
-        signUpVC.modalPresentationStyle = .fullScreen
-        self.present(signUpVC, animated: true, completion: nil)
+        if Auth.auth().currentUser?.uid == nil {
+            let storyboard = UIStoryboard(name: .signUpViewController, bundle: nil)
+            let signUpVC = storyboard.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
+            signUpVC.modalPresentationStyle = .fullScreen
+            self.present(signUpVC, animated: true, completion: nil)
+        }
     }
     
 }
@@ -65,12 +98,14 @@ extension ChatListViewController: UITableViewDelegate {
 extension ChatListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatListTableViewCell.identifier,
                                                  for: indexPath) as! ChatListTableViewCell
+        let user = users[indexPath.row]
+        cell.setup(user: user)
         return cell
     }
     

@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 final class SignUpViewController: UIViewController {
     
@@ -66,6 +67,37 @@ private extension SignUpViewController {
     }
     
     func registerButtonDidTapped() {
+        saveUserImageToFirestorage()
+    }
+    
+}
+
+// MARK: - Firebase
+private extension SignUpViewController {
+    
+    func saveUserImageToFirestorage() {
+        guard let image = profileImageButton.imageView?.image else { return }
+        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
+        let fileName = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("profile_image").child(fileName)
+        storageRef.putData(uploadImage, metadata: nil) { data, error in
+            if let error = error {
+                print("Firestorageへの保存に失敗しました\(error)")
+                return
+            }
+            print("Firestorageへの保存に成功しました")
+            storageRef.downloadURL { url, error in
+                if let error = error {
+                    print("Firestorageからのダウンロードに失敗しました\(error)")
+                    return
+                }
+                guard let urlString = url?.absoluteString else { return }
+                self.saveUserInfoToFirestore(profileImageUrl: urlString)
+            }
+        }
+    }
+    
+    func saveUserInfoToFirestore(profileImageUrl: String) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
@@ -80,6 +112,7 @@ private extension SignUpViewController {
                 "email": email,
                 "username": username,
                 "createdAt": Timestamp(),
+                "profileImageUrl": profileImageUrl,
             ] as [String: Any]
             Firestore.firestore().collection("users").document(uid).setData(docData) { error in
                 if let error = error {

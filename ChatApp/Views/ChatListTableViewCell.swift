@@ -27,3 +27,27 @@ final class ChatListTableViewCell: UITableViewCell {
     }
     
 }
+
+// MARK: - setup
+extension ChatListTableViewCell {
+    
+    func setup(user: User) {
+        partnerLabel.text = user.username
+//        userImageView.image = user.profileImageUrl
+        dateLabel.text = dateFormatterForDateLabel(date: user.createdAt.dateValue())
+        latestMessageLabel.text = user.email
+    }
+    
+}
+
+private extension ChatListTableViewCell {
+    
+    func dateFormatterForDateLabel(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "ja_JP")
+        return formatter.string(from: date)
+    }
+    
+}
