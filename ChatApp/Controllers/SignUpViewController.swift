@@ -6,10 +6,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
-import FirebaseFirestore
-import FirebaseStorage
 
 final class SignUpViewController: UIViewController {
     
@@ -77,55 +73,33 @@ private extension SignUpViewController {
     
     func saveUserImageToFirestorage() {
         guard let image = profileImageButton.imageView?.image else { return }
-        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
-        let fileName = NSUUID().uuidString
-        let storageRef = Storage.storage().reference().child("profile_image").child(fileName)
-        storageRef.putData(uploadImage, metadata: nil) { data, error in
-            if let error = error {
-                print("Firestorageへの保存に失敗しました\(error)")
-                return
-            }
-            print("Firestorageへの保存に成功しました")
-            storageRef.downloadURL { url, error in
-                if let error = error {
-                    print("Firestorageからのダウンロードに失敗しました\(error)")
-                    return
-                }
-                guard let urlString = url?.absoluteString else { return }
-                self.saveUserInfoToFirestore(profileImageUrl: urlString)
+        FirebaseAPI.shared.saveUserImage(image: image) { result in
+            switch result {
+                case .success(let urlString):
+                    self.saveUserInfoToFirestore(profileImageUrl: urlString)
+                case .failure(let error):
+                    fatalError("\(error)")
             }
         }
     }
     
     func saveUserInfoToFirestore(profileImageUrl: String) {
         guard let email = emailTextField.text,
-              let password = passwordTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print("情報の保存に失敗しました\(error)")
-                return
+              let password = passwordTextField.text,
+              let username = self.usernameTextField.text else { return }
+        FirebaseAPI.shared.createUser(email: email,
+                                      password: password,
+                                      username: username,
+                                      profileImageUrl: profileImageUrl) { result in
+            switch result {
+                case .success:
+                    self.dismiss(animated: true, completion: nil)
+                case .failure(let error):
+                    fatalError("\(error)")
             }
-            print("情報の保存に成功しました")
-            guard let uid = result?.user.uid else { return }
-            guard let username = self.usernameTextField.text else { return }
-            let docData = [
-                "email": email,
-                "username": username,
-                "createdAt": Timestamp(),
-                "profileImageUrl": profileImageUrl,
-            ] as [String: Any]
-            Firestore.firestore().collection("users").document(uid).setData(docData) { error in
-                if let error = error {
-                    print("Firestoreの保存に失敗しました\(error)")
-                    return
-                }
-                print("Firestoreの保存に成功しました。")
-                self.dismiss(animated: true, completion: nil)
-            }
-            
         }
     }
-    
+        
 }
 
 // MARK: - UITextFieldDelegate

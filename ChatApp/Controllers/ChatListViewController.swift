@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseFirestore
-import FirebaseAuth
 
 final class ChatListViewController: UIViewController {
 
@@ -37,16 +34,13 @@ final class ChatListViewController: UIViewController {
 private extension ChatListViewController {
     
     func fetchUserInfoFromFirestore() {
-        Firestore.firestore().collection("users").getDocuments { snapshots, error in
-            if let error = error {
-                print("user情報の取得に失敗しました。\(error)")
-                return
-            }
-            snapshots?.documents.forEach { snapshot in
-                let dic = snapshot.data()
-                let user = User(dic: dic)
-                self.users.append(user)
-                self.tableView.reloadData()
+        FirebaseAPI.shared.fetchUserInfo { result in
+            switch result {
+                case .success(let user):
+                    self.users.append(user)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    fatalError("\(error)")
             }
         }
     }
@@ -69,8 +63,8 @@ private extension ChatListViewController {
     }
     
     func presentSignUpVC() {
-        if Auth.auth().currentUser?.uid == nil {
-            let storyboard = UIStoryboard(name: .signUpViewController, bundle: nil)
+        if FirebaseAPI.shared.isAreadySingUp {
+            let storyboard = UIStoryboard(name: .signUp, bundle: nil)
             let signUpVC = storyboard.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
             signUpVC.modalPresentationStyle = .fullScreen
             self.present(signUpVC, animated: true, completion: nil)
@@ -87,7 +81,7 @@ extension ChatListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "ChatRoom", bundle: nil)
+        let storyboard = UIStoryboard(name: .chatRoom, bundle: nil)
         let chatRoomVC = storyboard.instantiateViewController(identifier: ChatRoomViewController.identifier)
         navigationController?.pushViewController(chatRoomVC, animated: true)
     }

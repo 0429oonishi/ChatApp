@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene as! UIWindowScene)
         self.window = window
         window.makeKeyAndVisible()
-        let storyboard = UIStoryboard(name: "ChatList", bundle: nil)
+        let storyboard = UIStoryboard(name: .chatList, bundle: nil)
         let chatListVC = storyboard.instantiateViewController(identifier: "ChatListViewController")
         let navigationController = UINavigationController(rootViewController: chatListVC)
         window.rootViewController = navigationController

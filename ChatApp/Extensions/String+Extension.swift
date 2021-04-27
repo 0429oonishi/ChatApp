@@ -10,6 +10,9 @@ import Foundation
 extension String {
     
     // MARK: - storyboard name
-    static let signUpViewController = "SignUp"
+    static let chatList = "ChatList"
+    static let chatRoom = "ChatRoom"
+    static let signUp = "SignUp"
+    
 }
 
