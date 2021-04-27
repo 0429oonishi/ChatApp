@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import FirebaseStorage
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 typealias ResultHandler<R> = (Result<R, Error>) -> Void
 
@@ -36,7 +36,7 @@ final class FirebaseAPI {
             }
         }
     }
-    
+        
     func createUser(email: String, password: String, username: String, profileImageUrl: String, handler: @escaping ResultHandler<Any?>) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if error != nil {
@@ -54,7 +54,7 @@ final class FirebaseAPI {
         }
     }
     
-    func saveUserInfo(uid: String, docData: [String: Any], handler: @escaping ResultHandler<Any?>) {
+    private func saveUserInfo(uid: String, docData: [String: Any], handler: @escaping ResultHandler<Any?>) {
         Firestore.firestore().collection("users").document(uid).setData(docData) { error in
             if error != nil {
                 handler(.failure(FirebaseError.Firestore.save))

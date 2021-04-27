@@ -30,6 +30,10 @@
 		AB8A82902636D86D007A20C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A828F2636D86C007A20C2 /* User.swift */; };
 		ABF7AE7A2637D69F00FDDD6D /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */; };
 		ABF7AE8126381CFF00FDDD6D /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */; };
+		ABF7AE8626386EAE00FDDD6D /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE8526386EAD00FDDD6D /* UserList.storyboard */; };
+		ABF7AE8926386F6D00FDDD6D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */; };
+		ABF7AE92263870A400FDDD6D /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */; };
+		ABF7AE93263870A400FDDD6D /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */; };
 		BBBEF92E584079768CC9CBED /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95345ACA520904B6D166A59 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		AB8A828F2636D86C007A20C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
+		ABF7AE8526386EAD00FDDD6D /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 				AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */,
 				AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */,
 				AB8A826D2636ACF1007A20C2 /* SignUp.storyboard */,
+				ABF7AE8526386EAD00FDDD6D /* UserList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 				AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */,
 				AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */,
 				AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */,
+				ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +165,7 @@
 				AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */,
 				AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */,
 				AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */,
+				ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */,
 				ABF7AE7F2638199C00FDDD6D /* Xibs */,
 				AB8A820F2635B7DA007A20C2 /* Storyboards */,
 			);
@@ -210,6 +221,7 @@
 			children = (
 				AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */,
 				AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */,
+				ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -273,6 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF7AE93263870A400FDDD6D /* UserListTableViewCell.xib in Resources */,
+				ABF7AE8626386EAE00FDDD6D /* UserList.storyboard in Resources */,
 				AB8A821D2635BB1F007A20C2 /* ChatRoomTableViewCell.xib in Resources */,
 				AB8A81B226356B0F007A20C2 /* LaunchScreen.storyboard in Resources */,
 				AB8A81AF26356B0F007A20C2 /* Assets.xcassets in Resources */,
@@ -334,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8A82902636D86D007A20C2 /* User.swift in Sources */,
+				ABF7AE8926386F6D00FDDD6D /* UserListViewController.swift in Sources */,
 				AB8A82712636AF7F007A20C2 /* SignUpViewController.swift in Sources */,
 				AB8A81A626356B0B007A20C2 /* AppDelegate.swift in Sources */,
 				ABF7AE7A2637D69F00FDDD6D /* FirebaseError.swift in Sources */,
@@ -346,6 +361,7 @@
 				AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */,
 				AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */,
 				AB8A823326368295007A20C2 /* UIViewController+Extension.swift in Sources */,
+				ABF7AE92263870A400FDDD6D /* UserListTableViewCell.swift in Sources */,
 				ABF7AE8126381CFF00FDDD6D /* FirebaseAPI.swift in Sources */,
 				AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */,
 			);
