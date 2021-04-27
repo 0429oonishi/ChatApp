@@ -19,6 +19,14 @@ final class ChatListViewController: UIViewController {
         setupTableView()
         setupNavigationController()
         presentSignUpVC()
+        
+        let rightBarButton = UIBarButtonItem(title: "新規チャット",
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(rightBarButtonDidTapped))
+        navigationItem.rightBarButtonItem = rightBarButton
+        navigationItem.rightBarButtonItem?.tintColor = .white
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +77,18 @@ private extension ChatListViewController {
             signUpVC.modalPresentationStyle = .fullScreen
             self.present(signUpVC, animated: true, completion: nil)
         }
+    }
+    
+}
+
+// MARK: - @objc func
+@objc private extension ChatListViewController {
+    
+    func rightBarButtonDidTapped() {
+        let storyboard = UIStoryboard(name: .userList, bundle: nil)
+        let userListVC = storyboard.instantiateViewController(identifier: UserListViewController.identifier) as! UserListViewController
+        let navigationC = UINavigationController(rootViewController: userListVC)
+        present(navigationC, animated: true, completion: nil)
     }
     
 }

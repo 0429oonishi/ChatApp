@@ -13,6 +13,7 @@ extension String {
     static let chatList = "ChatList"
     static let chatRoom = "ChatRoom"
     static let signUp = "SignUp"
+    static let userList = "UserList"
     
 }
 
