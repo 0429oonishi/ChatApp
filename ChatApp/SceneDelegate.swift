@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene as! UIWindowScene)
         self.window = window
         window.makeKeyAndVisible()
-        let chatListVC = UIStoryboard.chatList.instantiateViewController(identifier: "ChatListViewController")
-        let navigationController = UINavigationController(rootViewController: chatListVC)
+        let chatHistoriesVC = UIStoryboard.chatHistories.instantiateViewController(identifier: ChatHistoriesViewController.identifier)
+        let navigationController = UINavigationController(rootViewController: chatHistoriesVC)
         window.rootViewController = navigationController
         guard let _ = (scene as? UIWindowScene) else { return }
     }

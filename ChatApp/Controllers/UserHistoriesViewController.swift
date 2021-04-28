@@ -1,5 +1,5 @@
 //
-//  UserListViewController.swift
+//  UserHistoriesViewController.swift
 //  ChatApp
 //
 //  Created by 大西玲音 on 2021/04/28.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UserListViewController: UIViewController {
+final class UserHistoriesViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
@@ -18,15 +18,15 @@ final class UserListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UserListTableViewCell.nib,
-                           forCellReuseIdentifier: UserListTableViewCell.identifier)
+        tableView.register(UserTableViewCell.nib,
+                           forCellReuseIdentifier: UserTableViewCell.identifier)
         
     }
     
 }
 
 // MARK: - Firebase
-private extension UserListViewController {
+private extension UserHistoriesViewController {
     
     func fetchUserInfoFromFirestore() {
         FirebaseAPI.shared.fetchUserInfo { result in
@@ -43,19 +43,19 @@ private extension UserListViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension UserListViewController: UITableViewDelegate {
+extension UserHistoriesViewController: UITableViewDelegate {
     
 }
 
 // MARK: - UITableViewDataSource
-extension UserListViewController: UITableViewDataSource {
+extension UserHistoriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserListTableViewCell.identifier, for: indexPath) as! UserListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as! UserTableViewCell
         let user = users[indexPath.row]
         cell.setup(user: user)
         return cell

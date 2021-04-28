@@ -11,14 +11,14 @@
 		AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A81A726356B0B007A20C2 /* SceneDelegate.swift */; };
 		AB8A81AF26356B0F007A20C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8A81AE26356B0F007A20C2 /* Assets.xcassets */; };
 		AB8A81B226356B0F007A20C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A81B026356B0F007A20C2 /* LaunchScreen.storyboard */; };
-		AB8A81BC26356C4B007A20C2 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */; };
-		AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */; };
+		AB8A81BC26356C4B007A20C2 /* ChatHistories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A81BB26356C4A007A20C2 /* ChatHistories.storyboard */; };
+		AB8A81BF26356CA9007A20C2 /* ChatHistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A81BE26356CA9007A20C2 /* ChatHistoriesViewController.swift */; };
 		AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */; };
 		AB8A820D2635B79F007A20C2 /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */; };
 		AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */; };
 		AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */; };
 		AB8A821D2635BB1F007A20C2 /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */; };
-		AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */; };
+		AB8A82232635C351007A20C2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82222635C351007A20C2 /* ChatTableViewCell.swift */; };
 		AB8A82282635C505007A20C2 /* ChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */; };
 		AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */; };
 		AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */; };
@@ -30,10 +30,10 @@
 		AB8A82902636D86D007A20C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A828F2636D86C007A20C2 /* User.swift */; };
 		ABF7AE7A2637D69F00FDDD6D /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */; };
 		ABF7AE8126381CFF00FDDD6D /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */; };
-		ABF7AE8626386EAE00FDDD6D /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE8526386EAD00FDDD6D /* UserList.storyboard */; };
-		ABF7AE8926386F6D00FDDD6D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */; };
-		ABF7AE92263870A400FDDD6D /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */; };
-		ABF7AE93263870A400FDDD6D /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */; };
+		ABF7AE8626386EAE00FDDD6D /* UserHistories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE8526386EAD00FDDD6D /* UserHistories.storyboard */; };
+		ABF7AE8926386F6D00FDDD6D /* UserHistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8826386F6D00FDDD6D /* UserHistoriesViewController.swift */; };
+		ABF7AE92263870A400FDDD6D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE90263870A400FDDD6D /* UserTableViewCell.swift */; };
+		ABF7AE93263870A400FDDD6D /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE91263870A400FDDD6D /* UserTableViewCell.xib */; };
 		ABF7AE9826392F2300FDDD6D /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */; };
 		BBBEF92E584079768CC9CBED /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95345ACA520904B6D166A59 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
@@ -48,14 +48,14 @@
 		AB8A81AE26356B0F007A20C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8A81B126356B0F007A20C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB8A81B326356B0F007A20C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
-		AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		AB8A81BB26356C4A007A20C2 /* ChatHistories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatHistories.storyboard; sourceTree = "<group>"; };
+		AB8A81BE26356CA9007A20C2 /* ChatHistoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoriesViewController.swift; sourceTree = "<group>"; };
 		AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 		AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
-		AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		AB8A82222635C351007A20C2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccessoryView.xib; sourceTree = "<group>"; };
 		AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 		AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
@@ -67,10 +67,10 @@
 		AB8A828F2636D86C007A20C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
-		ABF7AE8526386EAD00FDDD6D /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
-		ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
-		ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
-		ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
+		ABF7AE8526386EAD00FDDD6D /* UserHistories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserHistories.storyboard; sourceTree = "<group>"; };
+		ABF7AE8826386F6D00FDDD6D /* UserHistoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistoriesViewController.swift; sourceTree = "<group>"; };
+		ABF7AE90263870A400FDDD6D /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		ABF7AE91263870A400FDDD6D /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,10 +142,10 @@
 		AB8A820F2635B7DA007A20C2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				AB8A81BB26356C4A007A20C2 /* ChatList.storyboard */,
+				AB8A81BB26356C4A007A20C2 /* ChatHistories.storyboard */,
 				AB8A820C2635B79F007A20C2 /* ChatRoom.storyboard */,
 				AB8A826D2636ACF1007A20C2 /* SignUp.storyboard */,
-				ABF7AE8526386EAD00FDDD6D /* UserList.storyboard */,
+				ABF7AE8526386EAD00FDDD6D /* UserHistories.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -153,10 +153,10 @@
 		AB8A82102635B7EF007A20C2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB8A81BE26356CA9007A20C2 /* ChatListViewController.swift */,
+				AB8A81BE26356CA9007A20C2 /* ChatHistoriesViewController.swift */,
 				AB8A82112635B806007A20C2 /* ChatRoomViewController.swift */,
 				AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */,
-				ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */,
+				ABF7AE8826386F6D00FDDD6D /* UserHistoriesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,10 +164,10 @@
 		AB8A821F2635BB27007A20C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AB8A82222635C351007A20C2 /* ChatListTableViewCell.swift */,
+				AB8A82222635C351007A20C2 /* ChatTableViewCell.swift */,
 				AB8A821A2635BB1F007A20C2 /* ChatRoomTableViewCell.swift */,
 				AB8A822B2635C635007A20C2 /* ChatInputAccessoryView.swift */,
-				ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */,
+				ABF7AE90263870A400FDDD6D /* UserTableViewCell.swift */,
 				ABF7AE7F2638199C00FDDD6D /* Xibs */,
 				AB8A820F2635B7DA007A20C2 /* Storyboards */,
 			);
@@ -224,7 +224,7 @@
 			children = (
 				AB8A821B2635BB1F007A20C2 /* ChatRoomTableViewCell.xib */,
 				AB8A82272635C505007A20C2 /* ChatInputAccessoryView.xib */,
-				ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */,
+				ABF7AE91263870A400FDDD6D /* UserTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -288,12 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF7AE93263870A400FDDD6D /* UserListTableViewCell.xib in Resources */,
-				ABF7AE8626386EAE00FDDD6D /* UserList.storyboard in Resources */,
+				ABF7AE93263870A400FDDD6D /* UserTableViewCell.xib in Resources */,
+				ABF7AE8626386EAE00FDDD6D /* UserHistories.storyboard in Resources */,
 				AB8A821D2635BB1F007A20C2 /* ChatRoomTableViewCell.xib in Resources */,
 				AB8A81B226356B0F007A20C2 /* LaunchScreen.storyboard in Resources */,
 				AB8A81AF26356B0F007A20C2 /* Assets.xcassets in Resources */,
-				AB8A81BC26356C4B007A20C2 /* ChatList.storyboard in Resources */,
+				AB8A81BC26356C4B007A20C2 /* ChatHistories.storyboard in Resources */,
 				AB8A82282635C505007A20C2 /* ChatInputAccessoryView.xib in Resources */,
 				AB8A820D2635B79F007A20C2 /* ChatRoom.storyboard in Resources */,
 				AB8A826E2636ACF1007A20C2 /* SignUp.storyboard in Resources */,
@@ -351,12 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8A82902636D86D007A20C2 /* User.swift in Sources */,
-				ABF7AE8926386F6D00FDDD6D /* UserListViewController.swift in Sources */,
+				ABF7AE8926386F6D00FDDD6D /* UserHistoriesViewController.swift in Sources */,
 				AB8A82712636AF7F007A20C2 /* SignUpViewController.swift in Sources */,
 				AB8A81A626356B0B007A20C2 /* AppDelegate.swift in Sources */,
 				ABF7AE7A2637D69F00FDDD6D /* FirebaseError.swift in Sources */,
-				AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */,
-				AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */,
+				AB8A81BF26356CA9007A20C2 /* ChatHistoriesViewController.swift in Sources */,
+				AB8A82232635C351007A20C2 /* ChatTableViewCell.swift in Sources */,
 				AB8A82752636B10D007A20C2 /* String+Extension.swift in Sources */,
 				ABF7AE9826392F2300FDDD6D /* UIStoryboard+Extension.swift in Sources */,
 				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
@@ -365,7 +365,7 @@
 				AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */,
 				AB8A822C2635C635007A20C2 /* ChatInputAccessoryView.swift in Sources */,
 				AB8A823326368295007A20C2 /* UIViewController+Extension.swift in Sources */,
-				ABF7AE92263870A400FDDD6D /* UserListTableViewCell.swift in Sources */,
+				ABF7AE92263870A400FDDD6D /* UserTableViewCell.swift in Sources */,
 				ABF7AE8126381CFF00FDDD6D /* FirebaseAPI.swift in Sources */,
 				AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */,
 			);

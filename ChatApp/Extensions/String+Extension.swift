@@ -10,10 +10,10 @@ import Foundation
 extension String {
     
     // MARK: - storyboard name
-    static let chatList = "ChatList"
+    static let chatHistories = "ChatHistories"
     static let chatRoom = "ChatRoom"
     static let signUp = "SignUp"
-    static let userList = "UserList"
+    static let userHistories = "UserHistories"
     
 }
 

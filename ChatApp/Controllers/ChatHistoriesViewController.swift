@@ -1,5 +1,5 @@
 //
-//  ChatListViewController.swift
+//  ChatHistoriesViewController.swift
 //  ChatApp
 //
 //  Created by 大西玲音 on 2021/04/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ChatListViewController: UIViewController {
+final class ChatHistoriesViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
@@ -39,7 +39,7 @@ final class ChatListViewController: UIViewController {
 }
 
 // MARK: - Firebase
-private extension ChatListViewController {
+private extension ChatHistoriesViewController {
     
     func fetchUserInfoFromFirestore() {
         FirebaseAPI.shared.fetchUserInfo { result in
@@ -56,7 +56,7 @@ private extension ChatListViewController {
 }
 
 // MARK: - setup
-private extension ChatListViewController {
+private extension ChatHistoriesViewController {
     
     func setupTableView() {
         tableView.delegate = self
@@ -81,18 +81,18 @@ private extension ChatListViewController {
 }
 
 // MARK: - @objc func
-@objc private extension ChatListViewController {
+@objc private extension ChatHistoriesViewController {
     
     func rightBarButtonDidTapped() {
-        let userListVC = UIStoryboard.userList.instantiateViewController(identifier: UserListViewController.identifier) as! UserListViewController
-        let navigationC = UINavigationController(rootViewController: userListVC)
+        let userHistoriesVC = UIStoryboard.userHistories.instantiateViewController(identifier: UserHistoriesViewController.identifier) as! UserHistoriesViewController
+        let navigationC = UINavigationController(rootViewController: userHistoriesVC)
         present(navigationC, animated: true, completion: nil)
     }
     
 }
 
 // MARK: - UITableViewDelegate
-extension ChatListViewController: UITableViewDelegate {
+extension ChatHistoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
@@ -106,15 +106,15 @@ extension ChatListViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension ChatListViewController: UITableViewDataSource {
+extension ChatHistoriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ChatListTableViewCell.identifier,
-                                                 for: indexPath) as! ChatListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.identifier,
+                                                 for: indexPath) as! ChatTableViewCell
         let user = users[indexPath.row]
         cell.setup(user: user)
         return cell

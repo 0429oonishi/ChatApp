@@ -1,5 +1,5 @@
 //
-//  UserListTableViewCell.swift
+//  UserTableViewCell.swift
 //  ChatApp
 //
 //  Created by 大西玲音 on 2021/04/28.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UserListTableViewCell: UITableViewCell {
+final class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -22,7 +22,7 @@ final class UserListTableViewCell: UITableViewCell {
 }
 
 // MARK: - setup
-extension UserListTableViewCell {
+extension UserTableViewCell {
     
     func setup(user: User) {
         userNameLabel.text = user.username

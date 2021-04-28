@@ -1,5 +1,5 @@
 //
-//  ChatListTableViewCell.swift
+//  ChatTableViewCell.swift
 //  ChatApp
 //
 //  Created by 大西玲音 on 2021/04/26.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ChatListTableViewCell: UITableViewCell {
+final class ChatTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var userImageView: UIImageView!
     @IBOutlet private weak var latestMessageLabel: UILabel!
@@ -29,7 +29,7 @@ final class ChatListTableViewCell: UITableViewCell {
 }
 
 // MARK: - setup
-extension ChatListTableViewCell {
+extension ChatTableViewCell {
     
     func setup(user: User) {
         partnerLabel.text = user.username
@@ -40,7 +40,7 @@ extension ChatListTableViewCell {
     
 }
 
-private extension ChatListTableViewCell {
+private extension ChatTableViewCell {
     
     func dateFormatterForDateLabel(date: Date) -> String {
         let formatter = DateFormatter()
