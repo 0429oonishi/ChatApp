@@ -78,6 +78,6 @@ final class FirebaseAPI {
         }
     }
     
-    var isAreadySingUp: Bool { Auth.auth().currentUser?.uid == nil }
+    var isLogged: Bool { Auth.auth().currentUser?.uid == nil }
     
 }

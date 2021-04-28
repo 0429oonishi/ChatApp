@@ -71,7 +71,7 @@ private extension ChatListViewController {
     }
     
     func presentSignUpVC() {
-        if FirebaseAPI.shared.isAreadySingUp {
+        if FirebaseAPI.shared.isLogged {
             let storyboard = UIStoryboard(name: .signUp, bundle: nil)
             let signUpVC = storyboard.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
             signUpVC.modalPresentationStyle = .fullScreen
