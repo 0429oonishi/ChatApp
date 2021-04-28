@@ -18,7 +18,7 @@ final class UserListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UserListTableViewCell.nib(),
+        tableView.register(UserListTableViewCell.nib,
                            forCellReuseIdentifier: UserListTableViewCell.identifier)
         
     }
