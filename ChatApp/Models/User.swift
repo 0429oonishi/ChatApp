@@ -15,11 +15,15 @@ struct User {
     let createdAt: Timestamp
     let profileImageUrl: String
     
-    init(dic: [String: Any]) {
-        self.email = dic["email"] as? String ?? ""
-        self.username = dic["username"] as? String ?? ""
-        self.createdAt = dic["createdAt"] as? Timestamp ?? Timestamp()
-        self.profileImageUrl = dic["profileImageUrl"] as? String ?? ""
+    init?(dic: [String: Any]) {
+        guard let email = dic["email"] as? String,
+              let username = dic["username"] as? String,
+              let createdAt = dic["createdAt"] as? Timestamp,
+              let profileImageUrl = dic["profileImageUrl"] as? String else { return nil }
+        self.email = email
+        self.username = username
+        self.createdAt = createdAt
+        self.profileImageUrl = profileImageUrl
     }
     
 }

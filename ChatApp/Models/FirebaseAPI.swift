@@ -72,7 +72,10 @@ final class FirebaseAPI {
             }
             snapshots?.documents.forEach { snapshot in
                 let dic = snapshot.data()
-                let user = User(dic: dic)
+                guard let user = User(dic: dic) else {
+                    // ここもハンドリングする
+                    return
+                }
                 handler(.success(user))
             }
         }
