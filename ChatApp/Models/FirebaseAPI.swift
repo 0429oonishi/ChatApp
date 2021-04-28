@@ -13,12 +13,15 @@ import FirebaseStorage
 typealias ResultHandler<R> = (Result<R, Error>) -> Void
 
 final class FirebaseAPI {
-    
+
     static let shared = FirebaseAPI()
     private init() { }
     
     func saveUserImage(image: UIImage, handler: @escaping ResultHandler<String>) {
-        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
+        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else {
+            handler(.failure(ImageError.convertJpeg))
+            return
+        }
         let fileName = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child("profile_image").child(fileName)
         storageRef.putData(uploadImage, metadata: nil) { data, error in
@@ -31,7 +34,10 @@ final class FirebaseAPI {
                     handler(.failure(FirebaseError.Storage.download))
                     return
                 }
-                guard let urlString = url?.absoluteString else { return }
+                guard let urlString = url?.absoluteString else {
+                    handler(.failure(ImageError.convertUrlToString))
+                    return
+                }
                 handler(.success(urlString))
             }
         }
@@ -43,7 +49,10 @@ final class FirebaseAPI {
                 handler(.failure(FirebaseError.Auth.create))
                 return
             }
-            guard let uid = result?.user.uid else { return }
+            guard let uid = result?.user.uid else {
+                handler(.failure(FirebaseError.Auth.uid))
+                return
+            }
             let docData = [
                 "email": email,
                 "username": username,
@@ -73,7 +82,7 @@ final class FirebaseAPI {
             snapshots?.documents.forEach { snapshot in
                 let dic = snapshot.data()
                 guard let user = User(dic: dic) else {
-                    // ここもハンドリングする
+                    handler(.failure(UserError.userInit))
                     return
                 }
                 handler(.success(user))
