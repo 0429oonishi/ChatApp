@@ -28,13 +28,15 @@
 		AB8A82712636AF7F007A20C2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */; };
 		AB8A82752636B10D007A20C2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A82742636B10D007A20C2 /* String+Extension.swift */; };
 		AB8A82902636D86D007A20C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A828F2636D86C007A20C2 /* User.swift */; };
-		ABF7AE7A2637D69F00FDDD6D /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */; };
+		ABF7AE7A2637D69F00FDDD6D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE792637D69F00FDDD6D /* Error.swift */; };
 		ABF7AE8126381CFF00FDDD6D /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */; };
 		ABF7AE8626386EAE00FDDD6D /* UserHistories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE8526386EAD00FDDD6D /* UserHistories.storyboard */; };
 		ABF7AE8926386F6D00FDDD6D /* UserHistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8826386F6D00FDDD6D /* UserHistoriesViewController.swift */; };
 		ABF7AE92263870A400FDDD6D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE90263870A400FDDD6D /* UserTableViewCell.swift */; };
 		ABF7AE93263870A400FDDD6D /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE91263870A400FDDD6D /* UserTableViewCell.xib */; };
 		ABF7AE9826392F2300FDDD6D /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */; };
+		ABF7AEA126394C3200FDDD6D /* UserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AEA026394C3200FDDD6D /* UserUsecase.swift */; };
+		ABF7AEA52639528400FDDD6D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AEA42639528400FDDD6D /* UserRepository.swift */; };
 		BBBEF92E584079768CC9CBED /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95345ACA520904B6D166A59 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,13 +67,15 @@
 		AB8A82702636AF7F007A20C2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AB8A82742636B10D007A20C2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		AB8A828F2636D86C007A20C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
+		ABF7AE792637D69F00FDDD6D /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		ABF7AE8526386EAD00FDDD6D /* UserHistories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserHistories.storyboard; sourceTree = "<group>"; };
 		ABF7AE8826386F6D00FDDD6D /* UserHistoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistoriesViewController.swift; sourceTree = "<group>"; };
 		ABF7AE90263870A400FDDD6D /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		ABF7AE91263870A400FDDD6D /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		ABF7AEA026394C3200FDDD6D /* UserUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecase.swift; sourceTree = "<group>"; };
+		ABF7AEA42639528400FDDD6D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +193,8 @@
 		AB8A82922636D872007A20C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AB8A828F2636D86C007A20C2 /* User.swift */,
 				ABF7AE8026381CFF00FDDD6D /* FirebaseAPI.swift */,
+				ABF7AEA32639525300FDDD6D /* Entities */,
 				ABF7AE7E2638196A00FDDD6D /* Repositorys */,
 				ABF7AE7D2638196100FDDD6D /* Usecases */,
 			);
@@ -200,7 +204,7 @@
 		ABF7AE782637D68100FDDD6D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				ABF7AE792637D69F00FDDD6D /* FirebaseError.swift */,
+				ABF7AE792637D69F00FDDD6D /* Error.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -208,6 +212,7 @@
 		ABF7AE7D2638196100FDDD6D /* Usecases */ = {
 			isa = PBXGroup;
 			children = (
+				ABF7AEA026394C3200FDDD6D /* UserUsecase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 		ABF7AE7E2638196A00FDDD6D /* Repositorys */ = {
 			isa = PBXGroup;
 			children = (
+				ABF7AEA42639528400FDDD6D /* UserRepository.swift */,
 			);
 			path = Repositorys;
 			sourceTree = "<group>";
@@ -227,6 +233,14 @@
 				ABF7AE91263870A400FDDD6D /* UserTableViewCell.xib */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		ABF7AEA32639525300FDDD6D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A828F2636D86C007A20C2 /* User.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,12 +368,13 @@
 				ABF7AE8926386F6D00FDDD6D /* UserHistoriesViewController.swift in Sources */,
 				AB8A82712636AF7F007A20C2 /* SignUpViewController.swift in Sources */,
 				AB8A81A626356B0B007A20C2 /* AppDelegate.swift in Sources */,
-				ABF7AE7A2637D69F00FDDD6D /* FirebaseError.swift in Sources */,
+				ABF7AE7A2637D69F00FDDD6D /* Error.swift in Sources */,
 				AB8A81BF26356CA9007A20C2 /* ChatHistoriesViewController.swift in Sources */,
 				AB8A82232635C351007A20C2 /* ChatTableViewCell.swift in Sources */,
 				AB8A82752636B10D007A20C2 /* String+Extension.swift in Sources */,
 				ABF7AE9826392F2300FDDD6D /* UIStoryboard+Extension.swift in Sources */,
 				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
+				ABF7AEA126394C3200FDDD6D /* UserUsecase.swift in Sources */,
 				AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */,
 				AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */,
 				AB8A821C2635BB1F007A20C2 /* ChatRoomTableViewCell.swift in Sources */,
@@ -367,6 +382,7 @@
 				AB8A823326368295007A20C2 /* UIViewController+Extension.swift in Sources */,
 				ABF7AE92263870A400FDDD6D /* UserTableViewCell.swift in Sources */,
 				ABF7AE8126381CFF00FDDD6D /* FirebaseAPI.swift in Sources */,
+				ABF7AEA52639528400FDDD6D /* UserRepository.swift in Sources */,
 				AB8A82082635B1DA007A20C2 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

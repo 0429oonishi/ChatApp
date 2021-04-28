@@ -1,5 +1,5 @@
 //
-//  FirebaseError.swift
+//  Error.swift
 //  ChatApp
 //
 //  Created by 大西玲音 on 2021/04/27.
@@ -21,7 +21,16 @@ enum FirebaseError {
     
     enum Auth: Error {
         case create
+        case uid
     }
     
 }
 
+enum ImageError: Error {
+    case convertJpeg
+    case convertUrlToString
+}
+
+enum UserError: Error {
+    case userInit
+}
