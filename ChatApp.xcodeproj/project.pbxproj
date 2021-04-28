@@ -34,6 +34,7 @@
 		ABF7AE8926386F6D00FDDD6D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */; };
 		ABF7AE92263870A400FDDD6D /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */; };
 		ABF7AE93263870A400FDDD6D /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */; };
+		ABF7AE9826392F2300FDDD6D /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */; };
 		BBBEF92E584079768CC9CBED /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95345ACA520904B6D166A59 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		ABF7AE8826386F6D00FDDD6D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		ABF7AE90263870A400FDDD6D /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		ABF7AE91263870A400FDDD6D /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
+		ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,9 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				AB8A82072635B1DA007A20C2 /* UIColor+Extension.swift */,
+				AB8A82742636B10D007A20C2 /* String+Extension.swift */,
 				AB8A822F2636821C007A20C2 /* UITableViewCell+Extension.swift */,
 				AB8A823226368295007A20C2 /* UIViewController+Extension.swift */,
-				AB8A82742636B10D007A20C2 /* String+Extension.swift */,
+				ABF7AE9726392F2300FDDD6D /* UIStoryboard+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				AB8A81BF26356CA9007A20C2 /* ChatListViewController.swift in Sources */,
 				AB8A82232635C351007A20C2 /* ChatListTableViewCell.swift in Sources */,
 				AB8A82752636B10D007A20C2 /* String+Extension.swift in Sources */,
+				ABF7AE9826392F2300FDDD6D /* UIStoryboard+Extension.swift in Sources */,
 				AB8A82122635B806007A20C2 /* ChatRoomViewController.swift in Sources */,
 				AB8A82302636821C007A20C2 /* UITableViewCell+Extension.swift in Sources */,
 				AB8A81A826356B0B007A20C2 /* SceneDelegate.swift in Sources */,

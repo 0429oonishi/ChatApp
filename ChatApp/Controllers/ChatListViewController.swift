@@ -72,8 +72,7 @@ private extension ChatListViewController {
     
     func presentSignUpVC() {
         if FirebaseAPI.shared.isLogged {
-            let storyboard = UIStoryboard(name: .signUp, bundle: nil)
-            let signUpVC = storyboard.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
+            let signUpVC = UIStoryboard.signUp.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
             signUpVC.modalPresentationStyle = .fullScreen
             self.present(signUpVC, animated: true, completion: nil)
         }
@@ -85,8 +84,7 @@ private extension ChatListViewController {
 @objc private extension ChatListViewController {
     
     func rightBarButtonDidTapped() {
-        let storyboard = UIStoryboard(name: .userList, bundle: nil)
-        let userListVC = storyboard.instantiateViewController(identifier: UserListViewController.identifier) as! UserListViewController
+        let userListVC = UIStoryboard.userList.instantiateViewController(identifier: UserListViewController.identifier) as! UserListViewController
         let navigationC = UINavigationController(rootViewController: userListVC)
         present(navigationC, animated: true, completion: nil)
     }
@@ -101,8 +99,7 @@ extension ChatListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: .chatRoom, bundle: nil)
-        let chatRoomVC = storyboard.instantiateViewController(identifier: ChatRoomViewController.identifier)
+        let chatRoomVC = UIStoryboard.chatRoom.instantiateViewController(identifier: ChatRoomViewController.identifier)
         navigationController?.pushViewController(chatRoomVC, animated: true)
     }
     
