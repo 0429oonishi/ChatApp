@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol UserRepository: class {
+protocol UserRepository: AnyObject {
    
 }
 
