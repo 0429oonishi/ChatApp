@@ -32,7 +32,7 @@ final class ChatHistoriesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
                 
-        fetchUserInfoFromFirestore()
+        fetchUserFromFirestore()
         
     }
     
@@ -41,8 +41,8 @@ final class ChatHistoriesViewController: UIViewController {
 // MARK: - Firebase
 private extension ChatHistoriesViewController {
     
-    func fetchUserInfoFromFirestore() {
-        FirebaseAPI.shared.fetchUserInfo { result in
+    func fetchUserFromFirestore() {
+        FirebaseAPI.shared.fetchUser { result in
             switch result {
                 case .success(let user):
                     self.users.append(user)

@@ -25,23 +25,6 @@ final class UserHistoriesViewController: UIViewController {
     
 }
 
-// MARK: - Firebase
-private extension UserHistoriesViewController {
-    
-    func fetchUserInfoFromFirestore() {
-        FirebaseAPI.shared.fetchUserInfo { result in
-            switch result {
-                case .success(let user):
-                    self.users.append(user)
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    fatalError("\(error)")
-            }
-        }
-    }
-    
-}
-
 // MARK: - UITableViewDelegate
 extension UserHistoriesViewController: UITableViewDelegate {
     

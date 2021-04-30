@@ -59,11 +59,11 @@ final class FirebaseAPI {
                 "createdAt": Timestamp(),
                 "profileImageUrl": profileImageUrl,
             ] as [String: Any]
-            self.saveUserInfo(uid: uid, docData: docData, handler: handler)
+            self.saveUser(uid: uid, docData: docData, handler: handler)
         }
     }
     
-    private func saveUserInfo(uid: String, docData: [String: Any], handler: @escaping ResultHandler<Any?>) {
+    private func saveUser(uid: String, docData: [String: Any], handler: @escaping ResultHandler<Any?>) {
         Firestore.firestore().collection("users").document(uid).setData(docData) { error in
             if error != nil {
                 handler(.failure(FirebaseError.Firestore.save))
@@ -73,7 +73,7 @@ final class FirebaseAPI {
         }
     }
     
-    func fetchUserInfo(handler: @escaping ResultHandler<User>) {
+    func fetchUser(handler: @escaping ResultHandler<User>) {
         Firestore.firestore().collection("users").getDocuments { snapshots, error in
             if error != nil {
                 handler(.failure(FirebaseError.Firestore.fetch))

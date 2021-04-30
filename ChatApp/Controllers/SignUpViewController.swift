@@ -76,14 +76,14 @@ private extension SignUpViewController {
         FirebaseAPI.shared.saveUserImage(image: image) { result in
             switch result {
                 case .success(let urlString):
-                    self.saveUserInfoToFirestore(profileImageUrl: urlString)
+                    self.saveUserToFirestore(profileImageUrl: urlString)
                 case .failure(let error):
                     fatalError("\(error)")
             }
         }
     }
     
-    func saveUserInfoToFirestore(profileImageUrl: String) {
+    func saveUserToFirestore(profileImageUrl: String) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text,
               let username = self.usernameTextField.text else { return }

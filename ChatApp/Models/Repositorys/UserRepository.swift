@@ -8,9 +8,9 @@
 import UIKit
 
 protocol UserRepository: AnyObject {
-   
+    
 }
 
 class UserRepositoryImpl: UserRepository {
-    
+
 }
