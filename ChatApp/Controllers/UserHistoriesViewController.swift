@@ -16,11 +16,20 @@ final class UserHistoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        
+    }
+    
+}
+
+// MARK: - setup UITableView
+private extension UserHistoriesViewController {
+    
+    func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UserTableViewCell.nib,
                            forCellReuseIdentifier: UserTableViewCell.identifier)
-        
     }
     
 }

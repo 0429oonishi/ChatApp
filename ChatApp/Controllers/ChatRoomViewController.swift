@@ -24,13 +24,22 @@ final class ChatRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        
+    }
+    
+}
+
+// MARK: - setup UITableView
+private extension ChatRoomViewController {
+    
+    func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ChatRoomTableViewCell.nib,
                            forCellReuseIdentifier: ChatRoomTableViewCell.identifier)
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = .rgb(red: 118, green: 140, blue: 180)
-      
     }
     
 }
