@@ -16,6 +16,8 @@ final class SignUpViewController: UIViewController {
     @IBOutlet private weak var registerButton: UIButton!
     @IBOutlet private weak var alreadyHaveAccountButton: UIButton!
     
+    private let userUseCase = UserUseCase()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,34 +65,31 @@ private extension SignUpViewController {
     }
     
     func registerButtonDidTapped() {
-        saveUserImageToFirestorage()
+        saveUserImage()
     }
     
 }
 
-// MARK: - Firebase
 private extension SignUpViewController {
     
-    func saveUserImageToFirestorage() {
+    func saveUserImage() {
         guard let image = profileImageButton.imageView?.image else { return }
-        FirebaseAPI.shared.saveUserImage(image: image) { result in
+        userUseCase.saveImage(image: image) { result in
             switch result {
                 case .success(let urlString):
-                    self.saveUserToFirestore(profileImageUrl: urlString)
+                    self.saveUser(profileImageUrl: urlString)
                 case .failure(let error):
                     fatalError("\(error)")
             }
         }
     }
     
-    func saveUserToFirestore(profileImageUrl: String) {
+    func saveUser(profileImageUrl: String) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text,
               let username = self.usernameTextField.text else { return }
-        FirebaseAPI.shared.createUser(email: email,
-                                      password: password,
-                                      username: username,
-                                      profileImageUrl: profileImageUrl) { result in
+        let userData = UserData(email: email, username: username, profileImageUrl: profileImageUrl)
+        userUseCase.create(password: password, userData: userData) { result in
             switch result {
                 case .success:
                     self.dismiss(animated: true, completion: nil)
@@ -99,7 +98,7 @@ private extension SignUpViewController {
             }
         }
     }
-        
+    
 }
 
 // MARK: - UITextFieldDelegate

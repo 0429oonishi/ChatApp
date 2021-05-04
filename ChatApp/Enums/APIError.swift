@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FirebaseError {
+enum FirebaseError: Error {
     
     enum Storage: Error {
         case upload

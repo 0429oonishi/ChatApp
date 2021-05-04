@@ -12,6 +12,7 @@ final class ChatHistoriesViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var users = [User]()
+    private var userUseCase = UserUseCase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +33,16 @@ final class ChatHistoriesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
                 
-        fetchUserFromFirestore()
+        fetchUser()
         
     }
     
 }
 
-// MARK: - Firebase
 private extension ChatHistoriesViewController {
     
-    func fetchUserFromFirestore() {
-        FirebaseAPI.shared.fetchUser { result in
+    func fetchUser() {
+        userUseCase.fetch { result in
             switch result {
                 case .success(let user):
                     self.users.append(user)
@@ -71,7 +71,7 @@ private extension ChatHistoriesViewController {
     }
     
     func presentSignUpVC() {
-        if FirebaseAPI.shared.isLogged {
+        if userUseCase.isLogged {
             let signUpVC = UIStoryboard.signUp.instantiateViewController(withIdentifier: SignUpViewController.identifier) as! SignUpViewController
             signUpVC.modalPresentationStyle = .fullScreen
             self.present(signUpVC, animated: true, completion: nil)

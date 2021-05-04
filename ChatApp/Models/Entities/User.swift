@@ -27,3 +27,9 @@ struct User {
     }
     
 }
+
+struct UserData {
+    let email: String
+    let username: String
+    let profileImageUrl: String
+}

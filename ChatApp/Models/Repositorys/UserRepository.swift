@@ -7,10 +7,13 @@
 
 import UIKit
 
+typealias ResultHandler<R> = (Result<R, Error>) -> Void
+
 protocol UserRepository: AnyObject {
-    
+    func create(password: String, userData: UserData, handler: @escaping ResultHandler<Any?>)
+    func save(uid: String, userData: UserData, handler: @escaping ResultHandler<Any?>)
+    func saveImage(image: UIImage, handler: @escaping ResultHandler<String>)
+    func fetch(handler: @escaping ResultHandler<User>)
+    var isLogged: Bool { get }
 }
 
-class UserRepositoryImpl: UserRepository {
-
-}
